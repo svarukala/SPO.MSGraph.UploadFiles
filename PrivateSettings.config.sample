@@ -1,0 +1,7 @@
+﻿<appSettings>
+  <add key="ida:AppID" value="YOUR-AAD-APP-ID" />
+  <add key="ida:AppSecret" value="APP-SECRET" />
+  <add key="ida:RedirectUri" value="https://localhost:44309/" />
+  <add key="ida:AppScopes" value="User.Read Calendars.Read" />
+  <add key="ida:HostName" value="TENANT.sharepoint.com" />
+</appSettings>

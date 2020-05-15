@@ -1,0 +1,38 @@
+﻿@{
+    ViewBag.Title = "FileUpload";
+}
+
+<h2>FileUpload Demo</h2>
+
+<h2>@ViewBag.SiteTitle</h2>
+<ul>
+    @if (TempData["FileInfo"] != null)
+    {
+        <li>@TempData["FileInfo"]</li>
+    }
+    @if (ViewBag.ErrorMessage != null)
+    {
+        <span style="color:red">@ViewBag.ErrorMessage</span>
+    }
+</ul>
+<form action="" method="post" enctype="multipart/form-data">
+
+    <label for="file">Site Url:</label>
+    <!--
+    <input type="text" name="txtsiteurl" id="txtsiteurl" />
+        -->
+    <select name="txtsiteurl" id="txtsiteurl" style="max-width:100%;">
+        <option value="">Select</option>
+        <option value="/sites/Web01">https://m365x229910.sharepoint.com/sites/Web01</option>
+        <option value="/sites/Web02">https://m365x229910.sharepoint.com/sites/Web02</option>
+        <option value="/sites/Web03">https://m365x229910.sharepoint.com/sites/Web03</option>
+    </select>
+
+    <br />
+    <label for="file">Filename:</label>
+    <input type="file" name="file" id="file" />
+    <br />
+    <br />
+    <input type="submit" value="Upload"/>
+</form>
+
